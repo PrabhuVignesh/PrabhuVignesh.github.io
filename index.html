@@ -231,7 +231,7 @@
 
 
 
-                    <form action="http://formspree.io/prabhu.vignesh1990@gmail.com" method="POST" id="contactForm" novalidate >
+                    <form action="" method="POST" id="contactForm" novalidate >
                         <div class="row control-group">
                             <div class="form-group col-xs-12 floating-label-form-group controls">
                                 <label>Name</label>
@@ -259,7 +259,7 @@
                         <div id="success"></div>
                         <div class="row">
                             <div class="form-group col-xs-12">
-                                 <input class="btn btn-success btn-lg" type="submit" value="Send">
+                                 <input class="btn btn-success btn-lg" onclick="send_mail();" type="submit" value="Send">
                             </div>
                         </div>
                     </form>
@@ -267,7 +267,19 @@
             </div>
         </div>
     </section>
+<script>
+function send_mail(){
+var message = $("#message").val();
+var email = $("#email").val();
+ $.ajax({
+     url: "https://formspree.io/prabhu.vignesh1990@gmail.com",
+     method: "POST",
+     data: {message: message,email: email},
+     dataType: "json"
+ }); 
+}
 
+</script>
     <!-- Footer -->
     <footer class="text-center">
         <div class="footer-above">
