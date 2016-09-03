@@ -181,7 +181,6 @@ $(document).ready(function(){
             success: function(data){
                $.each( data, function( key, value ) {
                     $("#github_list").append("<div class=\"col s16 m4 l4\"><div class=\"card\"><div class=\"card-image waves-effect waves-block waves-light\"><img class=\"activator\" src=\"img/project5.png\"></div><div class=\"card-content\"><span class=\"card-title activator grey-text text-darken-4\">"+value.name+" <i class=\"mdi-navigation-more-vert right\"></i></span><p><a target=\"_blank\" href='"+value.html_url+"'>Repo Link</a></p></div><div class=\"card-reveal\"><span class=\"card-title grey-text text-darken-4\">"+value.name+" <i class=\"mdi-navigation-close right\"></i></span><p>"+value.description+"</p></div></div></div>");
-                  console.log( key );
                 });
             }});
 });
