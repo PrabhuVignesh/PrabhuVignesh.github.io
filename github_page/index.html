@@ -98,7 +98,7 @@
     <div class="container">  
         <div class="row">
             <div class="col l6 s12">
-                <form class="col s12" action="contact.php" method="post">
+                <form class="col s12" action="https://formspree.io/prabhu.vignesh1990@gmail.com" method="post">
                     <div class="row">
                         <div class="input-field col s6">
                             <i class="mdi-action-account-circle prefix white-text"></i>
@@ -107,18 +107,22 @@
                         </div>
                         <div class="input-field col s6">
                             <i class="mdi-communication-email prefix white-text"></i>
-                            <input id="icon_email" name="email" type="email" class="validate white-text">
+                            <input id="icon_email" name="_replyto" type="email" class="validate white-text">
                             <label for="icon_email" class="white-text">Email-id</label>
                         </div>
+                        <input type="hidden" name="_subject" value="Web CV Submission" />
                         <div class="input-field col s12">
                             <i class="mdi-editor-mode-edit prefix white-text"></i>
                             <textarea id="icon_prefix2" name="message" class="materialize-textarea white-text"></textarea>
                             <label for="icon_prefix2" class="white-text">Message</label>
                         </div>
                         <div class="col offset-s7 s5">
-                            <button class="btn waves-effect waves-light red darken-1" type="submit">Submit
-                                <i class="mdi-content-send right white-text"></i>
-                            </button>
+                    <div id="success"></div>
+                        <div class="row">
+                            <div class="form-group col-xs-12">
+                                 <input class="btn btn-success btn-lg" type="submit" value="Send">
+                            </div>
+                        </div>
                         </div>
                     </div>
                 </form>
