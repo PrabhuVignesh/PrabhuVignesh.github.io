@@ -457,3 +457,14 @@ footer .footer-below {
     display: none;
     opacity: 0;
 }
+
+.df_images {
+    position: relative;
+    padding: 10%;
+    float: left;
+    width:  100px;
+    height: 250px;
+    background-position: 50% 50%;
+    background-repeat:   no-repeat;
+    background-size:     cover;
+}
