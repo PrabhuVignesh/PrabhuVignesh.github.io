@@ -38,7 +38,7 @@
 <pre>
  .  ____  .    ____________________________
  |/      \|   |                            |
-[| <span style="color: #FF0000;">&hearts;    &hearts;</span> |]  | Deployment                |
+[| <span style="color: #FF0000;">&hearts;    &hearts;</span> |]  | Deployment                 |
  |___==___|  / &copy; Prabhu Vignesh Kumar 2012 |
               |____________________________|
 
