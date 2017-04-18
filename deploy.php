@@ -9,7 +9,7 @@
 	// The commands
 	$commands = array(
 		'echo $PWD',
-		'sudo su peacefulprabhu'
+		'sudo su peacefulprabhu',
 		'whoami',
 		'git pull origin master',
 		'git status',
