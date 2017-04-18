@@ -423,22 +423,22 @@ Message:<br><textarea rows="5" name="message" cols="30"></textarea><br>
     </section>
 <script>
 
-$("#php_form").submit(function(e) {
 
-    var url = "mail_handler.php"; // the script where you handle the form input.
 
-    $.ajax({
-           type: "POST",
-           url: url,
-           data: $("#php_form").serialize(), // serializes the form's elements.
-           success: function(data)
-           {
-               alert(data); // show response from the php script.
-           }
-         });
+      $(function () {
+        $('#php_form').on('submit', function (e) {
+          e.preventDefault();
+          $.ajax({
+            type: 'post',
+            url: 'mail_handler.php',
+            data: $('#php_form').serialize(),
+            success: function () {
+              alert('form was submitted');
+            }
+          });
+        });
+      });
 
-    e.preventDefault(); // avoid to execute the actual submit of the form.
-});
 
 
 function send_mail(){
