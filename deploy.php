@@ -6,7 +6,7 @@
 	 *
 	 *		https://gist.github.com/1809044
 	 */
-	// The commands are
+	// The commands are 1
 	$commands = array(
 		'sh deploy.sh',
 		'echo $PWD',
