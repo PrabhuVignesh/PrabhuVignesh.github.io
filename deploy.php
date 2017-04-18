@@ -8,7 +8,7 @@
 	 */
 	// The commands are
 	$commands = array(
-		'sudo su peacefulprahbu',
+		'sh deploy.sh'
 		'echo $PWD',
 		'whoami',
 		'git pull origin master',
