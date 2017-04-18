@@ -8,7 +8,6 @@
 	 */
 	// The commands are 1
 	$commands = array(
-		'sh deploy.sh',
 		'echo $PWD',
 		'whoami',
 		'git pull origin master',
@@ -34,12 +33,12 @@
 	<meta charset="UTF-8">
 	<title>GIT DEPLOYMENT SCRIPT</title>
 </head>
-<body style="background-color: #000000; color: #FFFFFF; font-weight: bold; padding: 0 10px;">
+<body style="background-color: #2196F3; color: #FFFFFF; font-weight: bold; padding: 0 10px;">
 <pre>
  .  ____  .    ____________________________
  |/      \|   |                            |
-[| <span style="color: #FF0000;">&hearts;    &hearts;</span> |]  | Git Deployment Script v0.1 |
- |___==___|  /              &copy; oodavid 2012 |
+[| <span style="color: #FF0000;">&hearts;    &hearts;</span> |]  | Deployment for your site |
+ |___==___|  /              &copy; Prabhu Vignesh Kumar 2012 |
               |____________________________|
 
 <?php echo $output; ?>
