@@ -31,9 +31,10 @@
 <html lang="en-US">
 <head>
 	<meta charset="UTF-8">
-	<title>GIT DEPLOYMENT SCRIPT</title>
+	<title>Prabhu Profile auto deploy</title>
+	<link href="img/profile1.jpg" rel="icon" type="image/jpg">
 </head>
-<body style="background-color: #2196F3; color: #FFFFFF; font-weight: bold; padding: 0 10px;">
+<body style="background-color: #425265; color: #FFFFFF; font-weight: bold; padding: 0 10px;">
 <pre>
  .  ____  .    ____________________________
  |/      \|   |                            |
