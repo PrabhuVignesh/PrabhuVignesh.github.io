@@ -8,7 +8,7 @@
 	 */
 	// The commands are
 	$commands = array(
-		'sh deploy.sh'
+		'sh deploy.sh',
 		'echo $PWD',
 		'whoami',
 		'git pull origin master',
