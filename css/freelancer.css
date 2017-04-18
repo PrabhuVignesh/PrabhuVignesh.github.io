@@ -468,3 +468,10 @@ footer .footer-below {
     background-repeat:   no-repeat;
     background-size:     cover;
 }
+.nav_font_size {
+    font-size: 12px;
+}
+
+.nav_font_size_small {
+    font-size: 8px;
+}
