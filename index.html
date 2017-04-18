@@ -377,7 +377,7 @@
                     <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
                     <!-- The form should work on most web servers, but if the form is not working you may need to configure your web server differently. -->
 
-<form action="mail_handler.php" method="post">
+<form id="php_form" action="" method="post">
 First Name: <input type="text" name="first_name"><br>
 Last Name: <input type="text" name="last_name"><br>
 Email: <input type="text" name="email"><br>
@@ -422,6 +422,25 @@ Message:<br><textarea rows="5" name="message" cols="30"></textarea><br>
         </div>
     </section>
 <script>
+
+$("#php_form").submit(function(e) {
+
+    var url = "mail_handler.php"; // the script where you handle the form input.
+
+    $.ajax({
+           type: "POST",
+           url: url,
+           data: $("#php_form").serialize(), // serializes the form's elements.
+           success: function(data)
+           {
+               alert(data); // show response from the php script.
+           }
+         });
+
+    e.preventDefault(); // avoid to execute the actual submit of the form.
+});
+
+
 function send_mail(){
 var message = $("#message").val();
 var email = $("#email").val();
