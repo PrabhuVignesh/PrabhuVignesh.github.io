@@ -38,8 +38,8 @@
 <pre>
  .  ____  .    ____________________________
  |/      \|   |                            |
-[| <span style="color: #FF0000;">&hearts;    &hearts;</span> |]  | Deployment for your site |
- |___==___|  /              &copy; Prabhu Vignesh Kumar 2012 |
+[| <span style="color: #FF0000;">&hearts;    &hearts;</span> |]  | Deployment |
+ |___==___|  / &copy; Prabhu Vignesh Kumar 2012 |
               |____________________________|
 
 <?php echo $output; ?>
