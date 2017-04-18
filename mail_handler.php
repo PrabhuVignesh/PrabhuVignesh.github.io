@@ -1,5 +1,6 @@
 <?php 
 if(isset($_POST['submit'])){
+    var_dump($_POST);
     $to = "prabhu.vignesh1990@gmail.com"; // this is your Email address
     $from = $_POST['email']; // this is the sender's Email address
     $first_name = $_POST['first_name'];
