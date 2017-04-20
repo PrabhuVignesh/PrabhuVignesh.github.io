@@ -111,12 +111,29 @@
         <div class="container">
             <div class="row">    
 
-                    <img class="img-responsive" style="max-width:30%" src="img/profile1.jpg" alt="">        
-                    
+              <!--  <div class="s2 m4 l4" style="text-align: -webkit-center;">
+                 <div class="card" style="background-color: #425265;width:30%;height:10%">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <span>
+                            <img class="mySlides activator df_images" src="img/emc.jpg">
+                            <img class="mySlides activator df_images" src="img/cloudu.jpg">
+                        </span>
+                    </div>
+                </div>
+                </div>  -->    
+                    <img class="img-responsive" style="max-width:30%" src="img/profile1.jpg" alt="">  
+                    <!--<div style="max-width:10%;height: auto;">
+                              <img class="mySlides df_images_small" src="img/emc.jpg" style="width:151%;height: 20%;">
+                              <img class="mySlides df_images_small" src="img/cloudu.jpg" style="width:151%;height: 10%;">
+                            </div> -->
                 <div class="col-lg-12">                   
 
                     <div class="intro-text">
-                        <span class="name"><img style="width:10% "class=" img-responsive" src="img/emc.jpg" alt=""> <p style="font-style: italic;text-transform: none;font-weight: 200;">EMC Certified </p>DevOps & Cloud Consultant</span>
+
+
+                        <span class="name">
+
+                            <p style="font-style: italic;text-transform: none;font-weight: 200;"> Certified </p>DevOps & Cloud Consultant</span>
                         <hr class="star-light">
                         <span class="skills">Devops - Public Cloud & Private Cloud - Infrastructure Automation And Development- Configuration Management - Automation - Application Development, Build, Deployment - Enterprise Architect -  Cloud Architecture and SDN -  Virtualization - Networking- Sysadmin - Borderline Development - Middleware Development - Rest Api Development - Open Source Enthusiast - Version Control And Repository Management - Monitoring And Reporting Management, IoT Development And Management - Agile And Project Management </span>
                     </div>
@@ -348,11 +365,31 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-4 col-lg-offset-2">
-                    <p>Dedicated to optimization, experienced DevOps Engineer understands the melding of operations and development to quickly deliver code to customers. Has experience with the Cloud and monitoring processes, as well as DevOps development in, Mac and Linux systems. Certified EMC Academic Associate in Cloud Infrastructure and Services, Which helps me to find excellent solution for cloud infrastructure.</p>
+                <div class="col-lg-6 ">
+                    <p class="custom_p">Dedicated to optimization, experienced DevOps Engineer understands the melding of operations and development to quickly deliver code to customers. Has experience with the Cloud and monitoring processes, as well as DevOps development in, Mac and Linux systems. Certified by EMC and Rackspace's CloudU for Cloud Solution Architect </p>
+                    <p class="custom_p">Have Good knowledge and experience in Ruby, Python, Ruby on Rails, Django, PostGres, MySQL, JavaScripts, REST API, LDAP & SSO, GIT, Ansible, Chef, Jenkins, Docker, Hashicorp suit(Terraform, Packer, Nomad, Consul, Vagrant.), AWS, Google Cloud, OpenStack, ELK stack, Android and Cordova. Extremely comfortable with Agile Methodology for SDLC and having experience with Atlassian suit and all Agile Management tools including ServiceNow, BMCRemedy, TFS, CA Suit etc. and a lot more.. </p>
                 </div>
-                <div class="col-lg-4">
-                    <p>Have Good knowledge and experience in Ruby, Python, Ruby on Rails, Django, PostGres, MySQL, JavaScripts, REST API, LDAP & SSO, GIT, Ansible, Chef, Jenkins, Docker, Hashicorp suit(Terraform, Packer, Nomad, Consul, Vagrant.), AWS, Google Cloud, OpenStack, ELK stack, Android and Cordova. Extremely comfortable with Agile Methodology for SDLC and having experience with Atlassian suit and all Agile Management tools including ServiceNow, BMCRemedy, TFS, CA Suit etc. and a lot more.. </p>
+                <div class="col-lg-6">
+                      <div class="slider">
+                        <ul class="slides">
+                          <li>
+                            <img src="img/emc_cert.png"> <!-- random image -->
+                            <div class="caption custom_slide_0 ">
+                              <!-- <h3 class="custom_slide">EMC Certified </h3>
+                              <h5 class="light  custom_slide_1">Cloud Consultant</h5> -->
+                            </div>
+                          </li>
+                          <li>
+                            <img src="img/rackspace.png"> <!-- random image -->
+                            <div class="caption custom_slide_0">
+                             <!-- <h3 class="custom_slide">Rackspace's CloudU Certified</h3>
+                              <h5 class="light custom_slide_1">Cloud Consultant</h5> -->
+                            </div>
+                          </li>
+
+                        </ul>
+                      </div>
+      
                 </div>
                 <!--
                     <div class="col-lg-8 col-lg-offset-2 text-center">Download Resume
@@ -426,22 +463,38 @@ Message:<br><textarea rows="5" name="message" cols="30"></textarea><br>
 
 
 
-      $(function () {
-        $('#php_form').on('submit', function (e) {
-          e.preventDefault();
-          $.ajax({
-            type: 'post',
-            url: 'mail_handler.php',
-            data: $('#php_form').serialize(),
-            success: function () {
-              alert('form was submitted');
-            }
-          });
-        });
-      });
+      // $(function () {
+      //   $('#php_form').on('submit', function (e) {
+      //     e.preventDefault();
+      //     $.ajax({
+      //       type: 'post',
+      //       url: 'mail_handler.php',
+      //       data: $('#php_form').serialize(),
+      //       success: function () {
+      //         alert('form was submitted');
+      //       }
+      //     });
+      //   });
+      // });
+
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+   
 
 
-
+        
 function send_mail(){
 var message = $("#message").val();
 var email = $("#email").val();
@@ -516,7 +569,7 @@ var email = $("#email").val();
 
     <!-- Contact Form JavaScript -->
     <script src="js/jqBootstrapValidation.js"></script>
-    <script src="js/contact_me.js"></script>
+    <!--<script src="js/contact_me.js"></script>-->
     <script src="min/plugin-min.js"></script>
     <script src="min/custom-min.js"></script>
     <!-- Custom Theme JavaScript -->
