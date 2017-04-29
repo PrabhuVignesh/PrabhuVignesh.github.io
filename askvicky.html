@@ -1,0 +1,129 @@
+
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>Prabhu Profile auto deploy</title>
+	<link href="img/profile1.jpg" rel="icon" type="image/jpg">
+</head>
+<style type="text/css">
+/* CSS Document */
+body {
+    font:12px arial;
+    color: #222;
+    text-align:center;
+    padding:35px; }
+  
+form, p, span {
+    margin:0;
+    padding:0; }
+  
+input { font:12px arial; }
+  
+a {
+    color:#0000FF;
+    text-decoration:none; }
+  
+    a:hover { text-decoration:underline; }
+  
+#wrapper, #loginform {
+    margin:0 auto;
+    padding-bottom:25px;
+    background:#EBF4FB;
+    width:504px;
+    border:1px solid #ACD8F0; }
+  
+#loginform { padding-top:18px; }
+  
+    #loginform p { margin: 5px; }
+  
+#chatbox_cover {
+    text-align:left;
+    margin:0 auto;
+    margin-bottom:25px;
+    padding:10px;
+    background:#fff;
+    height:270px;
+    width:430px;
+    border:1px solid #ACD8F0;
+    overflow:auto;
+    color: #000; }
+  
+#usermsg {
+    width:395px;
+    border:1px solid #ACD8F0; }
+  
+#submit { width: 60px; }
+  
+.error { color: #ff0000; }
+  
+#menu { padding:12.5px 25px 12.5px 25px; }
+  
+.welcome { float:left;
+	color: blue;
+ }
+  
+.logout { float:right; }
+  
+.msgln { margin:0 0 2px 0; }
+</style>
+<body style="background-color: #425265; color: #FFFFFF; font-weight: bold; padding: 0 10px;">
+<pre>
+ .  ____  .    ____________________________
+ |/      \|   |                            |
+[| <span style="color: #FF0000;">&hearts;    &hearts;</span> |]  | ChatBox by vicky           |
+ |___==___|  / &copy; Prabhu Vignesh Kumar 2017 |
+              |____________________________|
+
+</pre>
+
+ 
+<div id="wrapper">
+    <div id="menu">
+        <p class="welcome">Hi There!!<b></b></p>
+        <p class="logout" onclick="logout()"><a id="exit" href="#">Exit Chat</a></p>
+        <div style="clear:both"></div>
+    </div>
+     
+	<div id="chatbox_cover">
+	<table style="width:100%">
+		<tbody id="chatbox">
+			<tr><td>Vicky : Hi There!!</td></tr>
+			
+		</tbody>
+	</table>
+	</div>
+
+    <form name="message" action="">
+        <input name="usermsg" type="text" id="usermsg" size="63" />
+        <button id="submitmsg" onclick="ask_vicky();" value="Send">Send</button>
+    </form>
+</div>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3/jquery.min.js"></script>
+<script type="text/javascript">
+
+function logout() {
+    $("#chatbox").html("<tr><td>Vicky : Hi There!!</td></tr>");
+}
+function ask_vicky() {
+	console.log("i am here");
+	dataval= $("#submitmsg").val();
+	$("#chatbox").append("<tr><td style='float:right'>You : "+dataval+"</td></tr>");
+	console.log(dataval);
+          $.ajax({ 
+                type: 'GET', 
+                url: "http://prabhuvigneshkumar.com/askvicky/"+dataval, 
+                crossDomain: true,
+                dataType: 'jsonp',
+                success: function (data) { 
+                    $.each(data, function(index, element) {
+                        $('body').append($('<div>', {
+                            text: element.name
+                        }));
+                    });
+                }
+            });
+}
+</script>
+</body>
+</html>
