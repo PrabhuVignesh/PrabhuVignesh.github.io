@@ -116,6 +116,7 @@ function ask_vicky() {
                 crossDomain: true,
                 dataType: 'jsonp',
                 success: function (data) { 
+                    console.log(data);
                     $.each(data, function(index, element) {
                         $('body').append($('<div>', {
                             text: element.name
