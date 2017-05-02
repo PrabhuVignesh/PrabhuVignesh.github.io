@@ -107,13 +107,14 @@ a {
 
 $(document).ajaxStart(function(){
     $("#loading").show();
-    $('#form_box').off("click");
+    document.getElementById('form_box').style.pointerEvents = 'none';
 });
 $(document).ajaxComplete(function(){
     $("#loading").hide();
-    $('#form_box').on("click");
+    document.getElementById('form_box').style.pointerEvents = 'auto';
 });
 
+ 
 function logout() {
     $("#chatbox").html("<tr><td>Vicky : Hi There!!</td></tr>");
 }
