@@ -11,9 +11,7 @@
 	$commands = array(
 		'echo $PWD',
 		'whoami',
-		'ls -a',
 		'git pull origin master',
-		'echo $PWD',
 		'git status',
 	);
 	// Run the commands for output
