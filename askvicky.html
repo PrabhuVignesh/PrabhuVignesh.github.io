@@ -119,7 +119,7 @@ function logout() {
     $("#chatbox").html("<tr><td>Vicky : Hi There!!</td></tr>");
 }
 function ask_vicky() {
-	dataval= $("#submitmsg").val();
+	dataval= $("#usermsg").val();
 	$("#chatbox").append("<tr><td style='float:right'>You : "+dataval+"</td></tr>");
           $.ajax({ 
                 type: 'GET', 
