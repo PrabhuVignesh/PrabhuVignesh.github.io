@@ -118,9 +118,7 @@ function ask_vicky() {
                 success: function (data) { 
                     console.log(data);
                     $.each(data, function(index, element) {
-                        $('body').append($('<div>', {
-                            text: element.name
-                        }));
+                        console.log(index);
                     });
                 }
             });
