@@ -14,9 +14,6 @@
 		'git pull origin master',
 		'echo $PWD',
 		'git status',
-		'git submodule sync',
-		'git submodule update',
-		'git submodule status',
 	);
 	// Run the commands for output
 	$output = '';
