@@ -112,12 +112,16 @@ $(document).keypress(function(e) {
 $(document).ajaxStart(function(){
     $("#loading").show();
     document.getElementById('form_box').style.pointerEvents = 'none';
-    $('*').off('keyup keydown keypress');
+    $("#form_box").keypress(function(e) {
+        if(e.which == 13) {
+            e.preventDefault();
+        }
+    });
 });
 $(document).ajaxComplete(function(){
     $("#loading").hide();
     document.getElementById('form_box').style.pointerEvents = 'auto';
-    $('*').on('keyup keydown keypress');
+
 });
 
  
