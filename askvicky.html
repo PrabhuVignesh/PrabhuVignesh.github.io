@@ -106,19 +106,17 @@ function logout() {
     $("#chatbox").html("<tr><td>Vicky : Hi There!!</td></tr>");
 }
 function ask_vicky() {
-	console.log("i am here");
 	dataval= $("#submitmsg").val();
 	$("#chatbox").append("<tr><td style='float:right'>You : "+dataval+"</td></tr>");
-	console.log(dataval);
           $.ajax({ 
                 type: 'GET', 
                 url: "http://prabhuvigneshkumar.com/askvicky/"+dataval, 
                 crossDomain: true,
                 dataType: 'json',
                 success: function (data) { 
-                    console.log(data);
-                     $.each(data, function(index, element) {
-                         console.log(index);
+                     $.each(data, function(key, val) {
+                         console.log(val);
+                          $("#chatbox").append("<tr><td>Vicky : "+ val+"</td></tr>")
                      });
                 }
             });
