@@ -142,10 +142,13 @@ function ask_vicky() {
                 dataType: 'json',
                 success: function (data) { 
                      $.each(data, function(key, val) {
-                         console.log(val);
                           $("#chatbox").append("<tr><td>Vicky : "+ val+"</td></tr>")
                      });
-                }
+                },
+                error: function(XMLHttpRequest, textStatus, errorThrown) { 
+                    alert("Status: " + textStatus); alert("Error: " + errorThrown); 
+                }  
+
             });        
     }
 
