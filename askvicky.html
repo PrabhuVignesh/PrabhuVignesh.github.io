@@ -104,7 +104,11 @@ a {
 </div>
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3/jquery.min.js"></script>
 <script type="text/javascript">
-
+$(document).keypress(function(e) {
+    if(e.which == 13) {
+        ask_vicky();
+    }
+});
 $(document).ajaxStart(function(){
     $("#loading").show();
     document.getElementById('form_box').style.pointerEvents = 'none';
@@ -120,8 +124,12 @@ function logout() {
 }
 function ask_vicky() {
 	dataval= $("#usermsg").val();
-	$("#chatbox").append("<tr><td style='float:right'>You : "+dataval+"</td></tr>");
-          $.ajax({ 
+    if(dataval == ""){
+        alert("please enter something!!");
+        return false;
+    }else{
+            $("#chatbox").append("<tr><td style='float:right'>You : "+dataval+"</td></tr>");
+                $.ajax({ 
                 type: 'GET', 
                 url: "http://prabhuvigneshkumar.com/askvicky/"+dataval, 
                 crossDomain: true,
@@ -132,7 +140,9 @@ function ask_vicky() {
                           $("#chatbox").append("<tr><td>Vicky : "+ val+"</td></tr>")
                      });
                 }
-            });
+            });        
+    }
+
 }
 </script>
 </body>
