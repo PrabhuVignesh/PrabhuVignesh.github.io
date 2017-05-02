@@ -66,6 +66,15 @@ a {
 .logout { float:right; }
   
 .msgln { margin:0 0 2px 0; }
+
+#overlay { 
+  display:none; 
+  position:absolute; 
+  background:#fff; 
+}
+#loading { 
+  position:absolute; 
+}
 </style>
 <body style="background-color: #425265; color: #FFFFFF; font-weight: bold; padding: 0 10px;">
 <pre>
@@ -93,8 +102,8 @@ a {
 		</tbody>
 	</table>
 	</div>
-    <div><img class="img-responsive" id ="loading" style="max-width:20%;margin:-47% 2% 23% 2%;display:none;" src="img/load.gif" alt="">  </div>
-     
+    <div id="overlay"><img class="img-responsive" id ="loading" style="max-width:20%;margin:-47% 2% 23% 2%;display:none;" src="img/load.gif" alt="">  </div>
+
 
     <div id="form_box" name="message">
         <input name="usermsg" type="text" id="usermsg" size="63" />
