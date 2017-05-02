@@ -105,10 +105,10 @@ a {
 <script type="text/javascript">
 
 $(document).ajaxStart(function(){
-    $("#loading").css("display", "block");
+    $("#loading").show();
 });
 $(document).ajaxComplete(function(){
-    $("#loading").css("display", "none");
+    $("#loading").hide();
 });
 
 function logout() {
