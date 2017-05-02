@@ -107,11 +107,11 @@ a {
 
 $(document).ajaxStart(function(){
     $("#loading").show();
-    $('#form_box').click(false);
+    $('#form_box').off("click");
 });
 $(document).ajaxComplete(function(){
     $("#loading").hide();
-    $('#form_box').click(true);
+    $('#form_box').on("click");
 });
 
 function logout() {
