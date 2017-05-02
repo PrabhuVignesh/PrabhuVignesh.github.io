@@ -112,12 +112,12 @@ $(document).keypress(function(e) {
 $(document).ajaxStart(function(){
     $("#loading").show();
     document.getElementById('form_box').style.pointerEvents = 'none';
-    $("#submitmsg").unbind('keypress');
+    $('*').off('keyup keydown keypress');
 });
 $(document).ajaxComplete(function(){
     $("#loading").hide();
     document.getElementById('form_box').style.pointerEvents = 'auto';
-    $("#submitmsg").bind('keypress');
+    $('*').on('keyup keydown keypress');
 });
 
  
