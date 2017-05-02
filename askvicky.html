@@ -112,9 +112,9 @@ $(document).keypress(function(e) {
 $(document).ajaxStart(function(){
     $("#loading").show();
     document.getElementById('form_box').style.pointerEvents = 'none';
-    $("#form_box").keypress(function(e) {
+    $("#usermsg").keypress(function(e) {
         if(e.which == 13) {
-            e.preventDefault();
+            return false;
         }
     });
 });
