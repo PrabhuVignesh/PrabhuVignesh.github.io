@@ -12,6 +12,7 @@
 		'echo $PWD',
 		'whoami',
 		'git pull origin master',
+		'echo $PWD',
 		'git status',
 		'git submodule sync',
 		'git submodule update',
@@ -32,7 +33,7 @@
 <html lang="en-US">
 <head>
 	<meta charset="UTF-8">
-	<title>Prabhu Profile auto deploy</title>
+	<title>Chat bot auto deploy</title>
 	<link href="img/profile1.jpg" rel="icon" type="image/jpg">
 </head>
 <body style="background-color: #425265; color: #FFFFFF; font-weight: bold; padding: 0 10px;">
@@ -40,7 +41,7 @@
  .  ____  .    ____________________________
  |/      \|   |                            |
 [| <span style="color: #FF0000;">&hearts;    &hearts;</span> |]  | Deployment                 |
- |___==___|  / &copy; Prabhu Vignesh Kumar 2012 |
+ |___==___|  / &copy; Prabhu Vignesh Kumar 2017 |
               |____________________________|
 
 <?php echo $output; ?>
